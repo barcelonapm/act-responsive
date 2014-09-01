@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    ( No sponsors yet )
+  </div>
+</div>
+
+[% IF global.conferences.present.merge( global.conferences.future ).size %]
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <b>{{Other Act conferences:}}</b>
+    </div>
+    <table class="table table-striped">
+      [% FOREACH c = global.conferences.present.merge( global.conferences.future ) %]
+        <tr><td><a href="[% c.url %]">[% c.name %]</a></td></tr>
+      [% END %]
+      <tr><td><a href="http://act.mongueurs.net/conferences.html">{{Other conferences}}</a></td></tr>
+  </table>
+[% END %]
