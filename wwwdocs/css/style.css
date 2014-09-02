@@ -16,15 +16,15 @@ body{
     display:table-row;
 }
 #page-content {
-    padding-bottom: 20px;
+    padding: 40px 0;
 }
 #main-menu .jumbotron {
     background-color: transparent;
     padding-left: 0;
     padding-right: 0;
+    text-align: center;
 }
 #page-footer {
-    margin-top: 20px;
     width:100%;
     overflow:hidden; /*for FF on Windows 7*/
     display:table-footer-group;
@@ -36,6 +36,9 @@ body{
 #page-footer .navbar {
     border-radius: 0;
     margin-bottom: 0;
+    padding-top: 20px;
+    border-left: 0;
+    border-right: 0;
 }
 #page-footer .frame { display:table-cell;}
 /* FOR IE6/7 */
