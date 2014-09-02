@@ -1,0 +1,40 @@
+html,body {
+    height:100%;
+}
+body{
+    margin:0;
+}
+#wrapper{
+    width:100%;
+    height:100%;
+    display:table;
+    margin:0 auto;
+}
+#content {
+    width:100%;
+    display:table-row;
+}
+#footer {
+    width:100%;
+    overflow:hidden; /*for FF on Windows 7*/
+    display:table-footer-group;
+}
+#footer .holder {
+    height:1%;
+    display:table-row;
+}
+#footer .navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+#footer .frame { display:table-cell;}
+/* FOR IE6/7 */
+/*
+#content{min-height:100%;}
+* html #content { height:100%;}
+#content .holder {padding-bottom:expression(document.getElementById("footer").offsetHeight + "px");}
+#footer{
+    position:relative;
+    margin-top:expression(- this.offsetHeight + "px");
+}
+*/

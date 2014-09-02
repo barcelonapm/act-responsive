@@ -5,6 +5,9 @@
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'bootstrap.min.css') %]" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'font-awesome.min.css') %]" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'style.css') %]" />
+    <!--
+    <link rel="stylesheet" type="text/css" href="http://bootswatch.com/simplex/bootstrap.min.css" />
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>[% global.conference.name %][% IF title %] | [% title  %][% END %]</title>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -14,30 +17,27 @@
     <![endif]-->
   </head>
   <body>
-    [% PROCESS menu %]
+    <div id="wrapper">
+      <div id="content">
+        [% PROCESS menu %]
 
-    <div class="container">
-      [% IF title %]
-        <div class="page-header">
-          <h1>[% title %]</h1>
-        </div>
-      [% END %]
+        <div class="container">
+          [% IF title %]
+            <div class="page-header">
+              <h1>[% title %]</h1>
+            </div>
+          [% END %]
 
-      [% IF banner %]
-        [% PROCESS banner %]
-      [% END %]
+          [% IF banner %]
+            [% PROCESS banner %]
+          [% END %]
 
-      <div class="row">
-        <div class="col-md-8">
           [% content %]
         </div>
-        <div class="col-md-4">
-          [% PROCESS sidebar %]
-        </div>
       </div>
-    </div>
 
-    [% PROCESS footer %]
+      [% PROCESS footer %]
+    </div>
 
     <script src="[% make_uri_info('js', 'jquery-1.11.0.min.js') %]"></script>
     <script src="[% make_uri_info('js', 'bootstrap.min.js') %]"></script>

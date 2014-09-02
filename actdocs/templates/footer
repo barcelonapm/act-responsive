@@ -1,5 +1,19 @@
-<div class="footer navbar navbar-default navbar-fixed-bottom">
-  <div class="container">
-    <p class="navbar-text">Powered by <a href="http://act.mongueurs.net/">Act</a> A Conference Toolkit</p>
+<div id="footer">
+  <div class="holder">
+    <div class="frame">
+      <div class="navbar navbar-default">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              [% PROCESS footers/conferences %]
+            </div>
+            <div class="col-sm-6">
+              [% PROCESS footers/social %]
+              [% PROCESS footers/powered %]
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
