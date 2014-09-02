@@ -17,21 +17,26 @@
     <![endif]-->
   </head>
   <body>
-    <div id="wrapper">
-      <div id="content">
-        [% PROCESS menu %]
+    <div id="page">
+      <div id="page-body">
+        <div class="navbar navbar-default navbar-static-top" id="main-menu" role="navigation">
+          [% PROCESS menu %]
 
-        <div class="container">
-          [% IF title %]
-            <div class="page-header">
-              <h1>[% title %]</h1>
+          <div class="container">
+            <div class="row">
+              <div class="jumbotron">
+                [% IF banner %]
+                  [% PROCESS banner %]
+                [% END %]
+                [% IF title %]
+                  <h1>[% title %]</h1>
+                [% END %]
+              </div>
             </div>
-          [% END %]
+          </div>
+        </div>
 
-          [% IF banner %]
-            [% PROCESS banner %]
-          [% END %]
-
+        <div class="container" id="page-content">
           [% content %]
         </div>
       </div>
