@@ -20,6 +20,8 @@ body{
 }
 #main-menu .jumbotron {
     background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
 }
 #page-footer {
     margin-top: 20px;

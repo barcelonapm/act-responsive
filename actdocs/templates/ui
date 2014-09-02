@@ -22,16 +22,14 @@
         <div class="navbar navbar-default navbar-static-top" id="main-menu" role="navigation">
           [% PROCESS menu %]
 
-          <div class="row">
+          <div class="container">
             <div class="jumbotron">
-               <div class="container">
-                [% IF banner %]
-                  [% PROCESS banner %]
-                [% END %]
-                [% IF title %]
-                  <h1>[% title %]</h1>
-                [% END %]
-              </div>
+              [% IF banner %]
+                [% PROCESS banner %]
+              [% END %]
+              [% IF title %]
+                <h1>[% title %]</h1>
+              [% END %]
             </div>
           </div>
         </div>
