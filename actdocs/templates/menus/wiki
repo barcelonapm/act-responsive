@@ -1,5 +1,5 @@
-[% IF global.request.user.is_admin %]
-  [% WRAPPER menus/item %]
-    <a href="[% make_uri('wiki') %]">Wiki</a>
-  [% END %]
+[% WRAPPER menus/item %]
+  <a href="[% make_uri('wiki') %]">
+    <i class="fa fa-edit hidden-md hidden-lg"></i><span class="hidden-sm"> Wiki</span>
+  </a>
 [% END %]

@@ -19,8 +19,7 @@
         [% PROCESS menus/wiki %]
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        [% PROCESS menus/admin %]
-        [% PROCESS menus/treasurer %]
+        [% PROCESS menus/language %]
         [% PROCESS menus/user %]
       </ul>
     </div>
