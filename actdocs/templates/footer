@@ -9,6 +9,8 @@
             </div>
             <div class="col-sm-6">
               [% PROCESS footers/social %]
+            </div>
+            <div class="col-sm-12">
               [% PROCESS footers/powered %]
             </div>
           </div>
