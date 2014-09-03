@@ -25,7 +25,9 @@
       [% END %]
 
       [% IF global.config.talks_submissions_open OR global.request.user.is_talks_admin %]
-        <li class="divider"></li>
+        [% IF global.config.talks_show_schedule OR global.request.user.is_talks_admin %]
+          <li class="divider"></li>
+        [% END %]
         <li><a href="[% make_uri('newtalk') %]">{{Submit a talk proposal}}</a></li>
       [% END %]
     </ul>
