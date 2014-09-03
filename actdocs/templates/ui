@@ -35,7 +35,9 @@
         </div>
 
         <div class="container" id="page-content">
-          [% content %]
+          <div class="col-xs-12">
+            [% content %]
+          </div>
         </div>
       </div>
 
