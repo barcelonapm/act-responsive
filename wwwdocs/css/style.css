@@ -51,3 +51,7 @@ body{
     margin-top:expression(- this.offsetHeight + "px");
 }
 */
+
+.table .act-description label {
+  display: inline;
+}
