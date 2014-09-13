@@ -52,6 +52,14 @@ body{
 }
 */
 
+@media(max-width:767px) {
+  .table-mobile thead { display: none }
+  .table-mobile tbody tr td { display: block !important }
+  .table-mobile tbody tr td:not(:first-child) { border: 0 }
+}
 .table .act-description label {
   display: inline;
+}
+p.message {
+  padding: 50px 0;
 }

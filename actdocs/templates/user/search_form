@@ -42,16 +42,17 @@
       <button type="submit" name="search" class="btn btn-primary btn-lg">{{Search}}</button>
     </div>
   </div>
-  <p>[% PROCESS user/list IF users %]</p>
+
+  [% PROCESS user/list IF users %]
 
   [% IF prev %]
     <input type="hidden" name="oprev" value="[% oprev %]" />
-    <input type="submit" name="prev"  value="&lt;&lt;" />
+    <input class="btn btn-primary" type="submit" name="prev"  value="&lt;&lt;" />
   [% END %]
   [% IF next %]
     [% "&nbsp;&nbsp;&nbsp;" IF oprev %]
     <input type="hidden" name="onext" value="[% onext %]" />
-    <input type="submit" name="next"  value="&gt;&gt;" />
+    <input class="btn btn-primary" type="submit" name="next"  value="&gt;&gt;" />
   [% END %]
 </form>
 
