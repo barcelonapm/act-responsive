@@ -2,35 +2,38 @@
   <form method="POST" action="[% global.request.r.uri %]">
     <div class="panel panel-default">
       <table class="table table-bordered">
-        <tr>
-          <th>{{Name}}</th>
-          [% FOREACH r = right_list %]
-            <th>[% r %]</th>
-          [% END %]
-        </tr>
-
-        [% FOREACH u = right %]
+        <thead>
           <tr>
-            <td>[% user_info(u.user) %]</td>
+            <th>{{Name}}</th>
             [% FOREACH r = right_list %]
-              <td><input type="checkbox" name="[% u.user.user_id %]-[% r %]" [% IF u.right.$r %]checked="checked" [% END %]/></td>
+              <th>[% r %]</th>
             [% END %]
           </tr>
-        [% END %]
-
-        <tr>
-          <td>
-            <select name="newuser">
-              <option value="" selected="selected" />
-              [% FOREACH u=users %]
-                <option value="[% u.user_id %]">[[% u.login %]] [% user_info(u) %]</option>
+        </thead>
+        <tbody>
+          [% FOREACH u = right %]
+            <tr>
+              <td>[% user_info(u.user) %]</td>
+              [% FOREACH r = right_list %]
+                <td><input type="checkbox" name="[% u.user.user_id %]-[% r %]" [% IF u.right.$r %]checked="checked" [% END %]/></td>
               [% END %]
-            </select>
-          </td>
-          [% FOREACH r = right_list %]
-            <td><input type="checkbox" name="new-[% r %]" /></td>
+            </tr>
           [% END %]
-        </tr>
+
+          <tr>
+            <td>
+              <select name="newuser">
+                <option value="" selected="selected" />
+                [% FOREACH u=users %]
+                  <option value="[% u.user_id %]">[[% u.login %]] [% user_info(u) %]</option>
+                [% END %]
+              </select>
+            </td>
+            [% FOREACH r = right_list %]
+              <td><input type="checkbox" name="new-[% r %]" /></td>
+            [% END %]
+          </tr>
+        </tbody>
       </table>
       <div class="panel-footer text-right">
         <input class="btn btn-primary" type="submit" name="ok" value="{{Submit}}" />
