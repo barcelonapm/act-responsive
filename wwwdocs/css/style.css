@@ -63,3 +63,41 @@ body{
 p.message {
   padding: 50px 0;
 }
+
+/*~------------------------------------------------------------------*/
+/* Timetable colours                                                 */
+/*~------------------------------------------------------------------*/
+.table-schedule td.center {
+  text-align: center;
+}
+.table-schedule td {
+  border: 0 !important;
+}
+.venue .alert {
+  background-color: #FFCC00;
+}
+.out .alert {
+  background-color: #EEEEEE;
+}
+.r1 .alert {
+  background-color: #FFD3D3;
+}
+.r2 .alert {
+  background-color: #D3FFD3;
+}
+.r3 .alert {
+  background-color: #D3D3FF;
+}
+.r4 .alert {
+  background-color: #FFFFD3;
+}
+.r5 .alert {
+  background-color: #D3FFFF;
+}
+.mtbutton {
+  cursor:pointer;
+  vertical-align: middle;
+}
+.starcount {
+  font-size: small;
+}

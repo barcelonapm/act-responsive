@@ -1,7 +1,9 @@
 [%
-  IF tag; title = loc("List of talks tagged <tag>", tag);
-   ELSE;   title = loc("List of talks");
-   END;
+  IF tag; 
+    title = loc("List of talks tagged <tag>", tag);
+  ELSE;
+    title = loc("List of talks");
+  END;
 %]
 [% WRAPPER ui title = title %]
   <div class="panel panel-default">
