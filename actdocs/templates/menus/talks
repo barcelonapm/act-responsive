@@ -16,14 +16,19 @@
       [% IF global.request.user.has_registered %]
         <li><a href="[% make_uri('myschedule') %]">{{Personal Schedule}}</a>
       [% END %]
+
       <li><a href="[% make_uri('timetable.ics') %]">{{iCal export}}</a></li>
+
+      [% IF global.request.user.is_talks_admin %]
+        <li><a href="[% make_uri('ical_import') %]">{{iCal import}}</a></li>
+        <li><a href="[% make_uri('export_talks') %]">{{CSV export}}</a></li>
+      [% END %]
     [% END %]
 
     [% IF global.request.user.is_talks_admin %]
       <li class="divider"></li>
       <li><a href="[% make_uri('tracks') %]">{{Tracks}}</a></li>
-      <li><a href="[% make_uri('ical_import') %]">{{iCal import}}</a></li>
-      <li><a href="[% make_uri('export_talks') %]">{{CSV export}}</a></li>
+      <li><a href="[% make_uri('trackedit') %]">{{Add a new track}}</a></li>
 
       [%# Events menu %]
       <li class="divider"></li>
