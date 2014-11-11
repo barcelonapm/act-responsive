@@ -80,11 +80,23 @@
               [% IF products.$p.prices.size != 1 %]
                 [% ispromo = 0 %]
                 [% FOREACH i IN products.$p.prices %]
-                  [% UNLESS i.promocode AND ispromo %]
+                  [% IF i.promocode; ispromo = 1 %]
                     <tr class="act-price">
                       <td class="act-description">
                         <div class="col-xs-10 col-xs-offset-2 col-md-11 col-md-offset-1">
-                          [% #TODO: PROMO CASE %]
+                          <span class="act-desciption">
+                            <label for="promo-[% p %]">{{Promotion code}}</label></td>
+                          </span>
+                        </div>
+                      </td>
+                      <td class="act-amount"><input class="form-control" type="text" id="promo-[% p %]" name="promo-[% p %]" value="[% promo.$p %]" /></td>
+                      <td></td>
+                    </tr>
+
+                  [% ELSE %]
+                    <tr class="act-price">
+                      <td class="act-description">
+                        <div class="col-xs-10 col-xs-offset-2 col-md-11 col-md-offset-1">
                           <span class="act-desciption">
                             <input type="radio" id="price-[% p %]-[% i.price_id %]" name="price-[% p %]" value="[% i.price_id %]"[% ' checked="checked"' IF i.checked %] />
                             <label for="price-[% p %]-[% i.price_id %]"> [% i.name %]</label>
