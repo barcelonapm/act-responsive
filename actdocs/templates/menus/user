@@ -29,12 +29,12 @@
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{Register}} <b class="caret"></b></a>
     <ul class="dropdown-menu">
       [% WRAPPER menus/item %]
-        <a href="[% make_uri('register') %]">{{New user}}</a>
+        <a href="[% make_uri('main') %]">{{Log in}}</a>
       [% END %]
     [% UNLESS global.config.closed %]
       <li class="divider"></li>
       [% WRAPPER menus/item %]
-        <a href="[% make_uri('main') %]">{{Log in}}</a>
+        <a href="[% make_uri('register') %]">{{New user}}</a>
       [% END %]
     [% END %]
     </ul>
