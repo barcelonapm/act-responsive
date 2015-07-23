@@ -27,6 +27,7 @@
         <td>
             [% user_info(t.user) %]
         </td>
+<<<<<<< HEAD
         <td>
           [% IF global.request.user.has_registered %]
             <input type="checkbox"
@@ -41,6 +42,18 @@
             />
           [% END %]
 
+=======
+        <td style="text-align: center;">
+          <!--
+          @Modified by Víctor Rivas
+          @Email vrivas@ujaen.es
+          @date 14-Jun-2015
+          @desc Trying to make a star appearing close to the user's favorite talks. The star will also be a link to modify the choice
+          -->
+          [% PROCESS talk/fav_ajax onetalk = t %]
+        </td>
+        <td>
+>>>>>>> 4205a56... Favorites! Favorites evrywhere!
           [% talk_link(t) %]
           [% talk_modify_link(t) %]
           [% IF t.url_abstract || t.url_talk %]<br />[[% END %]
